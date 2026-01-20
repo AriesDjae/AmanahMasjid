@@ -1,0 +1,181 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* AmanahMasjid Design System - Islamic-inspired elegant design */
+
+@layer base {
+  :root {
+    /* Cream/warm white backgrounds */
+    --background: 45 30% 98%;
+    --foreground: 160 30% 15%;
+
+    /* Card surfaces with subtle warmth */
+    --card: 45 25% 97%;
+    --card-foreground: 160 30% 15%;
+
+    --popover: 45 25% 97%;
+    --popover-foreground: 160 30% 15%;
+
+    /* Primary - Deep Emerald Green (Islamic significance) */
+    --primary: 156 76% 21%;
+    --primary-foreground: 45 30% 98%;
+
+    /* Secondary - Warm Gold */
+    --secondary: 43 55% 55%;
+    --secondary-foreground: 160 30% 15%;
+
+    /* Muted tones */
+    --muted: 45 20% 92%;
+    --muted-foreground: 160 15% 40%;
+
+    /* Accent - Light emerald */
+    --accent: 156 50% 94%;
+    --accent-foreground: 156 76% 21%;
+
+    /* Destructive */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 45 30% 98%;
+
+    /* Borders and inputs */
+    --border: 156 20% 85%;
+    --input: 156 20% 85%;
+    --ring: 156 76% 21%;
+
+    --radius: 0.75rem;
+
+    /* Custom colors */
+    --emerald: 156 76% 21%;
+    --emerald-light: 156 50% 35%;
+    --gold: 43 55% 55%;
+    --gold-light: 43 60% 70%;
+    --cream: 45 30% 98%;
+    --cream-dark: 45 20% 92%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(156, 76%, 21%) 0%, hsl(156, 60%, 30%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(43, 55%, 55%) 0%, hsl(43, 60%, 65%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(156, 76%, 21%) 0%, hsl(156, 60%, 15%) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(156 30% 20% / 0.1);
+    --shadow-card: 0 8px 30px -8px hsl(156 30% 20% / 0.12);
+    --shadow-elevated: 0 20px 50px -12px hsl(156 30% 20% / 0.2);
+
+    /* Sidebar */
+    --sidebar-background: 156 76% 21%;
+    --sidebar-foreground: 45 30% 98%;
+    --sidebar-primary: 43 55% 55%;
+    --sidebar-primary-foreground: 160 30% 15%;
+    --sidebar-accent: 156 60% 25%;
+    --sidebar-accent-foreground: 45 30% 98%;
+    --sidebar-border: 156 50% 30%;
+    --sidebar-ring: 43 55% 55%;
+  }
+
+  .dark {
+    --background: 160 30% 8%;
+    --foreground: 45 30% 95%;
+
+    --card: 160 25% 12%;
+    --card-foreground: 45 30% 95%;
+
+    --popover: 160 25% 12%;
+    --popover-foreground: 45 30% 95%;
+
+    --primary: 156 60% 45%;
+    --primary-foreground: 160 30% 8%;
+
+    --secondary: 43 55% 55%;
+    --secondary-foreground: 160 30% 8%;
+
+    --muted: 160 20% 18%;
+    --muted-foreground: 45 15% 65%;
+
+    --accent: 156 40% 20%;
+    --accent-foreground: 156 60% 45%;
+
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 45 30% 95%;
+
+    --border: 160 20% 20%;
+    --input: 160 20% 20%;
+    --ring: 156 60% 45%;
+
+    --sidebar-background: 160 30% 10%;
+    --sidebar-foreground: 45 30% 95%;
+    --sidebar-primary: 43 55% 55%;
+    --sidebar-primary-foreground: 160 30% 8%;
+    --sidebar-accent: 156 40% 18%;
+    --sidebar-accent-foreground: 45 30% 95%;
+    --sidebar-border: 160 20% 20%;
+    --sidebar-ring: 43 55% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: 'Amiri', serif;
+  }
+
+  .font-sans {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-gold {
+    background: var(--gradient-gold);
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  /* Islamic geometric pattern background */
+  .pattern-islamic {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30L30 0z' fill='none' stroke='%230D5C3D' stroke-width='0.5' opacity='0.08'/%3E%3C/svg%3E");
+  }
+
+  .pattern-islamic-gold {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30L30 0z' fill='none' stroke='%23C4A052' stroke-width='0.5' opacity='0.15'/%3E%3C/svg%3E");
+  }
+
+  /* Text gradient */
+  .text-gradient-gold {
+    background: linear-gradient(135deg, hsl(43, 55%, 55%) 0%, hsl(43, 60%, 70%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
