@@ -1,11 +1,19 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Routes, Route, useLocation } from "react-router-dom";
 import DashboardSidebar from "@/components/dashboard/DashboardSidebar";
 import DashboardHeader from "@/components/dashboard/DashboardHeader";
-import QuickStats from "@/components/dashboard/QuickStats";
-import PrayerTimesCard from "@/components/prayer/PrayerTimesCard";
-import RecentDonations from "@/components/dashboard/RecentDonations";
-import UpcomingEvents from "@/components/dashboard/UpcomingEvents";
+import DashboardHome from "@/components/dashboard/DashboardHome";
+import DashboardPrayerTimes from "@/components/dashboard/DashboardPrayerTimes";
+import DashboardEvents from "@/components/dashboard/DashboardEvents";
+import DashboardFinances from "@/components/dashboard/DashboardFinances";
+import DashboardMembers from "@/components/dashboard/DashboardMembers";
+import DashboardAnnouncements from "@/components/dashboard/DashboardAnnouncements";
+import DashboardEducation from "@/components/dashboard/DashboardEducation";
+import DashboardFacilities from "@/components/dashboard/DashboardFacilities";
+import DashboardZakat from "@/components/dashboard/DashboardZakat";
+import DashboardReports from "@/components/dashboard/DashboardReports";
+import DashboardSettings from "@/components/dashboard/DashboardSettings";
 
 const Dashboard = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -50,33 +58,19 @@ const Dashboard = () => {
         <DashboardHeader onMenuClick={() => setIsSidebarOpen(true)} />
 
         <main className="p-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="space-y-6"
-          >
-            {/* Welcome Section */}
-            <div className="mb-8">
-              <h1 className="font-heading text-2xl sm:text-3xl font-bold text-foreground">
-                Welcome back, Admin
-              </h1>
-              <p className="text-muted-foreground mt-1">
-                Here's what's happening at your mosque today.
-              </p>
-            </div>
-
-            {/* Quick Stats */}
-            <QuickStats />
-
-            {/* Prayer Times */}
-            <PrayerTimesCard />
-
-            {/* Two Column Layout */}
-            <div className="grid lg:grid-cols-2 gap-6">
-              <RecentDonations />
-              <UpcomingEvents />
-            </div>
-          </motion.div>
+          <Routes>
+            <Route index element={<DashboardHome />} />
+            <Route path="prayer-times" element={<DashboardPrayerTimes />} />
+            <Route path="events" element={<DashboardEvents />} />
+            <Route path="finances" element={<DashboardFinances />} />
+            <Route path="members" element={<DashboardMembers />} />
+            <Route path="announcements" element={<DashboardAnnouncements />} />
+            <Route path="education" element={<DashboardEducation />} />
+            <Route path="facilities" element={<DashboardFacilities />} />
+            <Route path="zakat" element={<DashboardZakat />} />
+            <Route path="reports" element={<DashboardReports />} />
+            <Route path="settings" element={<DashboardSettings />} />
+          </Routes>
         </main>
       </div>
     </div>
