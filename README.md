@@ -35,7 +35,7 @@ The dev server runs at http://localhost:8080.
 
 ### Environment variables
 
-Create a `.env` file in the project root:
+Copy `.env.example` to `.env` and fill in your Supabase values:
 
 ```env
 VITE_SUPABASE_PROJECT_ID=your-project-id
