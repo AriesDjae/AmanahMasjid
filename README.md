@@ -1,73 +1,60 @@
-# Welcome to your Lovable project
+# AmanahMasjid
 
-## Project info
+A mosque management web app for prayer times, events, donations, and community engagement, with an admin dashboard for mosque staff.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+**Live demo:** https://amanah-masjid.vercel.app
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+- **Prayer times:** daily prayer schedule
+- **Events:** mosque activities and announcements
+- **Donations:** donation information and tracking
+- **Authentication:** sign in and sign up with Supabase Auth
+- **Dashboard:** admin area for managing mosque data
 
-**Use Lovable**
+## Tech stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- React + TypeScript, built with Vite
+- Tailwind CSS and shadcn/ui
+- Supabase (database and authentication)
+- React Router, TanStack Query, React Hook Form + Zod
+- Vitest for testing
 
-Changes made via Lovable will be committed automatically to this repo.
+## Getting started
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Requirements: Node.js 18+ and npm.
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+git clone https://github.com/AriesDjae/AmanahMasjid.git
+cd AmanahMasjid
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The dev server runs at http://localhost:8080.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Environment variables
 
-**Use GitHub Codespaces**
+Create a `.env` file in the project root:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```env
+VITE_SUPABASE_PROJECT_ID=your-project-id
+VITE_SUPABASE_URL=https://your-project-id.supabase.co
+VITE_SUPABASE_PUBLISHABLE_KEY=your-anon-key
+```
 
-## What technologies are used for this project?
+Database migrations live in `supabase/migrations`.
 
-This project is built with:
+## Scripts
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+| Command           | Description                  |
+| ----------------- | ---------------------------- |
+| `npm run dev`     | Start the development server |
+| `npm run build`   | Build for production         |
+| `npm run preview` | Preview the production build |
+| `npm run lint`    | Run ESLint                   |
+| `npm run test`    | Run tests                    |
 
-## How can I deploy this project?
+## Author
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Muhammad Aries Djaenuri
